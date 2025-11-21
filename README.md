@@ -9,9 +9,7 @@ This image makes use of the [qobuz-dl python tooling](https://github.com/vitiko9
 * If no preexisting configs are available, a new configuration will be created on first execution of qobuz-dl.
   * Please refer to the qobuz-dl repository linked above for further details.   
 
-## Lazy Download Examples
-
-This simplifies the use of qobuz-dl a little by taking the steps mentioned in the next section out of the equation.
+## Download Examples
 
 ### Single Track Download
 
@@ -24,26 +22,6 @@ This simplifies the use of qobuz-dl a little by taking the steps mentioned in th
 ### Discography Download
 
 `qobuz-dl https://play.qobuz.com/artist/62542`
-
-## (Slightly more) Involved Download Example
-
-### Steps
-
-1. Activate the virtual environment. **This is required before using qobuz-dl**.
-   /app/qobuz-dl# `source bin/activate`
-2. Execute the qobuz-dl script
-   /app/qobuz-dl# `python -m qobuz_dl.cli dl https://play.qobuz.com/artist/62542`
-3. Change ownership of the downloaded files for host access
-3. Deactivate the virtual environment
-   /app/qobuz-dl# `deactivate`
-
-### qobuz-dl Download Parameters
-
-In order to see the parameters available for manually executing qobuz-dl, enter
-
-`python -m qobuz_dl.cli dl --help`
-
-**Note that the easiest way is to configure your preferred parameters in *config.ini*.**
 
 # Docker Configuration
 
