@@ -1,0 +1,32 @@
+diff --git a/qobuz_dl/cli.py b/qobuz_dl/cli.py
+index b72b3b8..baf484f 100644
+--- a/qobuz_dl/cli.py
++++ b/qobuz_dl/cli.py
+@@ -16,12 +16,9 @@ logging.basicConfig(
+     format="%(message)s",
+ )
+ 
+-if os.name == "nt":
+-    OS_CONFIG = os.environ.get("APPDATA")
+-else:
+-    OS_CONFIG = os.path.join(os.environ["HOME"], ".config")
++# modified for use with docker
++CONFIG_PATH = "/appdata"
+ 
+-CONFIG_PATH = os.path.join(OS_CONFIG, "qobuz-dl")
+ CONFIG_FILE = os.path.join(CONFIG_PATH, "config.ini")
+ QOBUZ_DB = os.path.join(CONFIG_PATH, "qobuz_dl.db")
+ 
+@@ -32,10 +29,8 @@ def _reset_config(config_file):
+     config["DEFAULT"]["email"] = input("Enter your email:\n- ")
+     password = input("Enter your password\n- ")
+     config["DEFAULT"]["password"] = hashlib.md5(password.encode("utf-8")).hexdigest()
+-    config["DEFAULT"]["default_folder"] = (
+-        input("Folder for downloads (leave empty for default 'Qobuz Downloads')\n- ")
+-        or "Qobuz Downloads"
+-    )
++    # modified for use with docker
++    config["DEFAULT"]["default_folder"] = "/download"
+     config["DEFAULT"]["default_quality"] = (
+         input(
+             "Download quality (5, 6, 7, 27) "
