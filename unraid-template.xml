@@ -6,7 +6,7 @@
     <Network>bridge</Network>
     <Privileged>false</Privileged>
     <Support></Support>
-    <Project>https://github.com/vitiko98/qobuz-dl</Project>
+    <Project>https://github.com/mdangers-DE/qobuz-dl-dockerized</Project>
     <Overview>Allows downloading of unencrypted files from Qobuz.</Overview>
     <WebUI></WebUI>
     <TemplateURL/>
