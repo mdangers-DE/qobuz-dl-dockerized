@@ -1,27 +1,29 @@
 <?xml version="1.0"?>
-    <Container version="0.1">
-    <Name>qobuz-dl</Name>
-    <Repository>mdangers/qobuz-dl</Repository>
-    <Registry>https://hub.docker.com/repository/docker/mdangers/qobuz-dl</Registry>
-    <Network>bridge</Network>
-    <Privileged>false</Privileged>
-    <Support></Support>
-    <Project>https://github.com/mdangers-DE/qobuz-dl-dockerized</Project>
-    <Overview>Allows downloading of unencrypted files from Qobuz.</Overview>
-    <WebUI></WebUI>
-    <TemplateURL/>
-    <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
-    <ExtraParams/>
-    <PostArgs/>
-    <DonateText/>
-    <DonateLink/>
-    <Shell>bash</Shell>
-    <Config Name="Config Path" Target="/appdata" Default="/mnt/user/appdata/qobuz-dl" Mode="rw" Description="Path to store the configuration in." Type="Path" Display="always" Required="true"
-        Mask="false"/>
-    <Config Name="Download Path" Target="/download" Default="" Mode="rw" Description="Path to store the downloads in." Type="Path" Display="always" Required="true"
-        Mask="false"/>
-    <Config Name="UID" Target="QOBUZ_DL_UID" Default="99" Description="UID for host access to downloaded files." Type="Variable" Display="always" Required="true"
-        Mask="false"/>
-    <Config Name="GID" Target="QOBUZ_DL_GID" Default="100" Description="GID for host access to downloaded files." Type="Variable" Display="always" Required="true"
-        Mask="false"/>
+<Container version="2">
+  <Name>qobuz-dl</Name>
+  <Repository>mdangers/qobuz-dl</Repository>
+  <Registry>https://hub.docker.com/repository/docker/mdangers/qobuz-dl</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://github.com/mdangers-DE/qobuz-dl-dockerized</Project>
+  <Overview>This image makes use of the [qobuz-dl python tooling](https://github.com/vitiko98/qobuz-dl). It allows for downloading unencrypted audio files from the [Qobuz streaming platform](https://www.qobuz.com). No Web UI is provided.</Overview>
+  <Category>MediaApp:Music</Category>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config Path" Target="/appdata" Default="/mnt/user/appdata/qobuz-dl" Mode="rw" Description="Path to store the configuration in." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/qobuz-dl</Config>
+  <Config Name="Download Path" Target="/download" Default="/mnt/user" Mode="rw" Description="Path to store the downloads in." Type="Path" Display="always" Required="true" Mask="false">/mnt/user</Config>
+  <Config Name="UID" Target="QOBUZ_DL_UID" Default="99" Mode="" Description="" Type="Variable" Display="always" Required="true" Mask="false">99</Config>
+  <Config Name="GID" Target="QOBUZ_DL_GID" Default="100" Mode="" Description="GID for host access to downloaded files." Type="Variable" Display="always" Required="true" Mask="false">100</Config>
+  <TailscaleStateDir/>
 </Container>
