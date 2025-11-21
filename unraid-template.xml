@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+    <Container version="0.1">
+    <Name>qobuz-dl</Name>
+    <Repository>mdangers/qobuz-dl</Repository>
+    <Registry>https://hub.docker.com/repository/docker/mdangers/qobuz-dl</Registry>
+    <Network>bridge</Network>
+    <Privileged>false</Privileged>
+    <Support></Support>
+    <Project>https://github.com/vitiko98/qobuz-dl</Project>
+    <Overview>Allows downloading of unencrypted files from Qobuz.</Overview>
+    <WebUI></WebUI>
+    <TemplateURL/>
+    <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+    <ExtraParams/>
+    <PostArgs/>
+    <DonateText/>
+    <DonateLink/>
+    <Shell>bash</Shell>
+    <Config Name="Config Path" Target="/appdata" Default="/mnt/user/appdata/qobuz-dl" Mode="rw" Description="Path to store the configuration in." Type="Path" Display="always" Required="true"
+        Mask="false"/>
+    <Config Name="Download Path" Target="/download" Default="" Mode="rw" Description="Path to store the downloads in." Type="Path" Display="always" Required="true"
+        Mask="false"/>
+    <Config Name="UID" Target="QOBUZ_DL_UID" Default="99" Description="UID for host access to downloaded files." Type="Variable" Display="always" Required="true"
+        Mask="false"/>
+    <Config Name="GID" Target="QOBUZ_DL_GID" Default="100" Description="GID for host access to downloaded files." Type="Variable" Display="always" Required="true"
+        Mask="false"/>
+</Container>
