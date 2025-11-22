@@ -37,7 +37,7 @@ ENV QOBUZ_DL_GID=100
 
 
 # Add qobuz-dl shorthand to /root/.bashrc
-RUN echo -e "qobuz-dl() {\n\tcd /app/qobuz-dl\n\tsource bin/activate\n\tpython -m qobuz_dl.cli dl \$@\n\tchown -R $QOBUZ_DL_UID:$QOBUZ_DL_GID /download/*\n\tchmod -R 777 /download/*\n\tdeactivate\n}" >> /root/.bashrc
+RUN echo -e "qobuz-dl() {\n\tcd /app/qobuz-dl\n\tsource bin/activate\n\tpython -W ignore -m qobuz_dl.cli dl \$@\n\tchown -R $QOBUZ_DL_UID:$QOBUZ_DL_GID /download/*\n\tchmod -R 777 /download/*\n\tdeactivate\n}" >> /root/.bashrc
 
 # Endless loop
 CMD ["python", "../app.py"]
