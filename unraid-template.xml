@@ -13,7 +13,7 @@
   <Category>MediaApp:Music</Category>
   <WebUI/>
   <TemplateURL/>
-  <Icon/>
+  <Icon>https://raw.githubusercontent.com/mdangers-DE/qobuz-dl-dockerized/refs/heads/main/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
